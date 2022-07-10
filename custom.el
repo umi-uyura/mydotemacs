@@ -15,6 +15,8 @@
  '(custom-safe-themes
    '("c7eb06356fd16a1f552cfc40d900fe7326ae17ae7578f0ef5ba1edd4fdd09e58" default))
  '(default-input-method "japanese-mozc-im")
+ '(emojify-emojis-dir "~/.emacs.d/site-etc/emojis")
+ '(global-emojify-mode t)
  '(indent-tabs-mode nil)
  '(initial-frame-alist '((top . 0)))
  '(make-backup-files t)
@@ -26,7 +28,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("melpa-stable" . "https://melpa.org/packages/")))
  '(package-selected-packages
-   '(restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
+   '(emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(recentf-save-file "~/.emacs.d/var/recentf")
