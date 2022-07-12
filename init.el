@@ -3,7 +3,12 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(let ((default-directory (expand-file-name "lisp" user-emacs-directory)))
+  (normal-top-level-add-subdirs-to-load-path))
+
 (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
+(let ((default-directory (expand-file-name "site-lisp" user-emacs-directory)))
+  (normal-top-level-add-subdirs-to-load-path))
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
