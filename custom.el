@@ -21,6 +21,7 @@
  '(indent-tabs-mode nil)
  '(initial-frame-alist '((top . 0)))
  '(make-backup-files t)
+ '(markdown-asymmetric-header t)
  '(mozc-leim-title "あ")
  '(open-junk-file-format "~/.emacs.d/var/junk/%Y-%m-%d-%H%M%S." t)
  '(package-archives
