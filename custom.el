@@ -17,6 +17,7 @@
  '(default-input-method "japanese-mozc-im")
  '(dired-dwim-target 'dired-dwim-target-next)
  '(emojify-emojis-dir "~/.emacs.d/site-etc/emojis")
+ '(global-auto-revert-mode t)
  '(global-emojify-mode t)
  '(indent-tabs-mode nil)
  '(initial-frame-alist '((top . 0)))
