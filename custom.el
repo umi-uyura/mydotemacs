@@ -8,6 +8,7 @@
  '(backup-directory-alist '((".*" . "~/.emacs.d/var/backup")))
  '(blink-cursor-mode nil)
  '(bookmark-default-file "~/.emacs.d/var/bookmarks")
+ '(calendar-week-start-day 1)
  '(column-number-mode t)
  '(create-lockfiles nil)
  '(current-language-environment "Japanese")
