@@ -32,7 +32,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("melpa-stable" . "https://melpa.org/packages/")))
  '(package-selected-packages
-   '(rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
+   '(rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(recentf-save-file "~/.emacs.d/var/recentf")
