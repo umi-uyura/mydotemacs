@@ -160,8 +160,12 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
 (require 'tempbuf)
+(add-hook 'help-mode-hook 'turn-on-tempbuf-mode)
+(add-hook 'completion-list-mode-hook 'turn-on-tempbuf-mode)
 (add-hook 'dired-mode-hook 'turn-on-tempbuf-mode)
+(add-hook 'bookmark-bmenu-mode-hook 'turn-on-tempbuf-mode)
 (add-hook 'magit-mode-hook 'turn-on-tempbuf-mode)
+(add-hook 'calendar-mode-hook 'turn-on-tempbuf-mode)
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
