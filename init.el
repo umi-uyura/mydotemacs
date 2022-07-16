@@ -23,10 +23,11 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
 (global-set-key (kbd "C-h") 'delete-backward-char)           ; Backspace
-(global-set-key (kbd "C-x ?") 'help-command)                 ; Help起動
+(global-set-key (kbd "C-x ?") 'help-command)                 ; Help
+(global-set-key (kbd "C-x b") 'ibuffer-other-window)         ; ibuffer
 (global-set-key (kbd "C-c t") 'toggle-truncate-lines)        ; 行折り返しのON/OFF
 (global-set-key (kbd "C-x F") 'recentf-open-files)           ; 最近使用したファイルから開く (recentf-mode)
-(global-set-key (kbd "C-c J") 'open-junk-file)
+(global-set-key (kbd "C-c J") 'open-junk-file)               ; メモファイル作成 (open-junk-file)
 (global-set-key (kbd "<henkan>") 'toggle-input-method)       ; 変換キー
 (global-set-key (kbd "<muhenkan>") 'toggle-input-method)     ; 無変換キー
 ;; (global-set-key (kbd "<zenkaku-hankaku>") 'toggle-input-method) ; 半角/全角キー
