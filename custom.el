@@ -4,6 +4,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(abbrev-file-name "~/.emacs.d/var/abbrev_defs")
+ '(auto-package-update-last-update-day-filename "~/.emacs.d/var/.last-package-update-day")
+ '(auto-package-update-prompt-before-update t)
+ '(auto-package-update-show-preview t)
  '(auto-save-list-file-prefix "~/.emacs.d/var/auto-save-list/.saves-")
  '(backup-directory-alist '((".*" . "~/.emacs.d/var/backup")))
  '(blink-cursor-mode nil)
@@ -33,7 +36,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("melpa-stable" . "https://melpa.org/packages/")))
  '(package-selected-packages
-   '(multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
+   '(auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(recentf-save-file "~/.emacs.d/var/recentf")
