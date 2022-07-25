@@ -19,6 +19,7 @@
  '(custom-safe-themes
    '("c7eb06356fd16a1f552cfc40d900fe7326ae17ae7578f0ef5ba1edd4fdd09e58" default))
  '(default-input-method "japanese-mozc-im")
+ '(delete-selection-mode t)
  '(dired-dwim-target 'dired-dwim-target-next)
  '(emojify-emojis-dir "~/.emacs.d/site-etc/emojis")
  '(global-auto-revert-mode t)
