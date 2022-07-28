@@ -31,6 +31,9 @@
 (global-set-key (kbd "<henkan>") 'toggle-input-method)       ; 変換キー
 (global-set-key (kbd "<muhenkan>") 'toggle-input-method)     ; 無変換キー
 ;; (global-set-key (kbd "<zenkaku-hankaku>") 'toggle-input-method) ; 半角/全角キー
+(global-set-key (kbd "C-;") '(lambda() (interactive) (text-scale-increase 1)))
+(global-set-key (kbd "C--") '(lambda() (interactive) (text-scale-decrease 1)))
+(global-set-key (kbd "M-0") '(lambda() (interactive) (text-scale-set 0)))
 
 ; "yes or no"を"y or n"にする
 (fset 'yes-or-no-p 'y-or-n-p)
