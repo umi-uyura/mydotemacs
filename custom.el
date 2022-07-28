@@ -46,6 +46,7 @@
  '(transient-history-file "~/.emacs.d/var/transient/history.el")
  '(transient-levels-file "~/.emacs.d/var/transient/levels.el")
  '(transient-values-file "~/.emacs.d/var/transient/values.el")
+ '(visible-bell t)
  '(yas-global-mode t)
  '(yas-snippet-dirs
    '("~/.emacs.d/etc/snippets" "~/.emacs.d/site-etc/yasnippet/snippets")))
