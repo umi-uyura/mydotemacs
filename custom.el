@@ -42,6 +42,8 @@
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(recentf-save-file "~/.emacs.d/var/recentf")
+ '(scroll-conservatively 1)
+ '(scroll-preserve-screen-position t)
  '(standard-indent 2)
  '(tool-bar-mode nil)
  '(transient-history-file "~/.emacs.d/var/transient/history.el")
