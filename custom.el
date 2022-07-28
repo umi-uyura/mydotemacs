@@ -25,6 +25,7 @@
  '(global-auto-revert-mode t)
  '(global-emojify-mode t)
  '(indent-tabs-mode nil)
+ '(inhibit-startup-screen t)
  '(initial-frame-alist '((top . 0)))
  '(make-backup-files t)
  '(markdown-asymmetric-header t)
