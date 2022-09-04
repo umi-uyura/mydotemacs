@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(abbrev-file-name "~/.emacs.d/var/abbrev_defs")
+ '(ad-redefinition-action 'accept)
  '(auto-package-update-last-update-day-filename "~/.emacs.d/var/.last-package-update-day")
  '(auto-package-update-prompt-before-update t)
  '(auto-package-update-show-preview t)
