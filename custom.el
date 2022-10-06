@@ -47,6 +47,7 @@
  '(recentf-save-file "~/.emacs.d/var/recentf")
  '(scroll-conservatively 1)
  '(scroll-preserve-screen-position t)
+ '(select-active-regions nil)
  '(standard-indent 2)
  '(tool-bar-mode nil)
  '(transient-history-file "~/.emacs.d/var/transient/history.el")
