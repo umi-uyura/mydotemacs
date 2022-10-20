@@ -26,6 +26,7 @@
  '(emojify-emojis-dir "~/.emacs.d/site-etc/emojis")
  '(global-auto-revert-mode t)
  '(global-emojify-mode t)
+ '(global-flycheck-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-frame-alist '((top . 0)))
