@@ -29,7 +29,7 @@
  '(global-flycheck-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(initial-frame-alist '((top . 0)))
+ '(initial-frame-alist '((top . 31)))
  '(js2-strict-missing-semi-warning nil)
  '(make-backup-files t)
  '(markdown-asymmetric-header t)
