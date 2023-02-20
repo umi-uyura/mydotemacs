@@ -1,14 +1,36 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
+;;; @ constant                                                      ;;;
+;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
+
+;; Linux
+(defconst run-linux (equal system-type 'gnu/linux))
+
+;; Windows
+(defconst run-windows (or (equal system-type 'windows-nt)
+                          (equal system-type 'ms-dos)
+                          (equal system-type 'cygwin)))
+
+;; Mac OS X/GNU-Darwin
+(defconst run-darwin (equal system-type 'darwin))
+
+;; CLI
+(defconst run-cli (not window-system))
+
+
+;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ load-path                                                     ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(let ((default-directory (expand-file-name "lisp" user-emacs-directory)))
+(defvar lisp-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path lisp-path)
+(let ((default-directory lisp-path))
   (normal-top-level-add-subdirs-to-load-path))
 
-(add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
-(let ((default-directory (expand-file-name "site-lisp" user-emacs-directory)))
-  (normal-top-level-add-subdirs-to-load-path))
+(defvar site-lisp-path (expand-file-name "site-lisp" user-emacs-directory))
+(when (file-directory-p site-lisp-path)
+  (add-to-list 'load-path site-lisp-path)
+  (let ((default-directory site-lisp-path))
+    (normal-top-level-add-subdirs-to-load-path)))
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
@@ -45,101 +67,103 @@
 ;;; @ mozc                                                          ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
-(require 'mozc-im)
-(require 'mozc-popup)
-(require 'mozc-cursor-color)
-(require 'wdired)
+(when run-linux
+  (require 'mozc-im)
+  (require 'mozc-popup)
+  (require 'mozc-cursor-color)
+  (require 'wdired)
 
-(setq default-input-method "japanese-mozc-im")
-(setq mozc-candidate-style 'popup)
-(setq mozc-cursor-color-alist '((direct        . "#AA5542")
-                                (read-only     . "#CC5542")
-                                (hiragana      . "#6aaf50")
-                                (full-katakana . "#cc8512")
-                                (half-ascii    . "#9b55c3")
-                                (full-ascii    . "#DC8CC3")
-                                (half-katakana . "#fb8512")))
-(setq mozc-helper-program-name "mozc_emacs_helper.sh")
+  (setq default-input-method "japanese-mozc-im")
+  (setq mozc-candidate-style 'popup)
+  (setq mozc-cursor-color-alist '((direct        . "#AA5542")
+                                  (read-only     . "#CC5542")
+                                  (hiragana      . "#6aaf50")
+                                  (full-katakana . "#cc8512")
+                                  (half-ascii    . "#9b55c3")
+                                  (full-ascii    . "#DC8CC3")
+                                  (half-katakana . "#fb8512")))
+  (setq mozc-helper-program-name "mozc_emacs_helper.sh")
 
-(defun enable-input-method (&optional arg interactive)
-  (interactive "P\np")
-  (if (not current-input-method)
-      (toggle-input-method arg interactive)))
+  (defun enable-input-method (&optional arg interactive)
+    (interactive "P\np")
+    (if (not current-input-method)
+        (toggle-input-method arg interactive)))
 
-(defun disable-input-method (&optional arg interactive)
-  (interactive "P\np")
-  (if current-input-method
-      (toggle-input-method arg interactive)))
+  (defun disable-input-method (&optional arg interactive)
+    (interactive "P\np")
+    (if current-input-method
+        (toggle-input-method arg interactive)))
 
-(defun isearch-enable-input-method ()
-  (interactive)
-  (if (not current-input-method)
-      (isearch-toggle-input-method)
-    (cl-letf (((symbol-function 'toggle-input-method)
-               (symbol-function 'ignore)))
-      (isearch-toggle-input-method))))
+  (defun isearch-enable-input-method ()
+    (interactive)
+    (if (not current-input-method)
+        (isearch-toggle-input-method)
+      (cl-letf (((symbol-function 'toggle-input-method)
+                 (symbol-function 'ignore)))
+        (isearch-toggle-input-method))))
 
-(defun isearch-disable-input-method ()
-  (interactive)
-  (if current-input-method
-      (isearch-toggle-input-method)
-    (cl-letf (((symbol-function 'toggle-input-method)
-               (symbol-function 'ignore)))
-      (isearch-toggle-input-method))))
+  (defun isearch-disable-input-method ()
+    (interactive)
+    (if current-input-method
+        (isearch-toggle-input-method)
+      (cl-letf (((symbol-function 'toggle-input-method)
+                 (symbol-function 'ignore)))
+        (isearch-toggle-input-method))))
 
-;; IME をトグルするキー設定
-(global-set-key (kbd "C-o") 'toggle-input-method)
-(define-key isearch-mode-map (kbd "C-o") 'isearch-toggle-input-method)
-(define-key wdired-mode-map (kbd "C-o") 'toggle-input-method)
+  ;; IME をトグルするキー設定
+  (global-set-key (kbd "C-o") 'toggle-input-method)
+  (define-key isearch-mode-map (kbd "C-o") 'isearch-toggle-input-method)
+  (define-key wdired-mode-map (kbd "C-o") 'toggle-input-method)
 
-;; IME を無効にするキー設定
-(global-set-key (kbd "C-<f1>") 'disable-input-method)
-(define-key isearch-mode-map (kbd "C-<f1>") 'isearch-disable-input-method)
-(define-key wdired-mode-map (kbd "C-<f1>") 'disable-input-method)
+  ;; IME を無効にするキー設定
+  (global-set-key (kbd "C-<f1>") 'disable-input-method)
+  (define-key isearch-mode-map (kbd "C-<f1>") 'isearch-disable-input-method)
+  (define-key wdired-mode-map (kbd "C-<f1>") 'disable-input-method)
 
-;; (global-set-key (kbd "C-j") 'disable-input-method)
-;; (define-key isearch-mode-map (kbd "C-j") 'isearch-disable-input-method)
-;; (define-key wdired-mode-map (kbd "C-j") 'disable-input-method)
+  ;; (global-set-key (kbd "C-j") 'disable-input-method)
+  ;; (define-key isearch-mode-map (kbd "C-j") 'isearch-disable-input-method)
+  ;; (define-key wdired-mode-map (kbd "C-j") 'disable-input-method)
 
-;; IME を有効にするキー設定
-(global-set-key (kbd "C-<f2>") 'enable-input-method)
-(define-key isearch-mode-map (kbd "C-<f2>") 'isearch-enable-input-method)
-(define-key wdired-mode-map (kbd "C-<f2>") 'enable-input-method)
+  ;; IME を有効にするキー設定
+  (global-set-key (kbd "C-<f2>") 'enable-input-method)
+  (define-key isearch-mode-map (kbd "C-<f2>") 'isearch-enable-input-method)
+  (define-key wdired-mode-map (kbd "C-<f2>") 'enable-input-method)
 
-;; (global-set-key (kbd "C-o") 'enable-input-method)
-;; (define-key isearch-mode-map (kbd "C-o") 'isearch-enable-input-method)
-;; (define-key wdired-mode-map (kbd "C-o") 'enable-input-method)
+  ;; (global-set-key (kbd "C-o") 'enable-input-method)
+  ;; (define-key isearch-mode-map (kbd "C-o") 'isearch-enable-input-method)
+  ;; (define-key wdired-mode-map (kbd "C-o") 'enable-input-method)
 
-;; mozc-cursor-color を利用するための対策
-(defvar-local mozc-im-mode nil)
-(add-hook 'mozc-im-activate-hook (lambda () (setq mozc-im-mode t)))
-(add-hook 'mozc-im-deactivate-hook (lambda () (setq mozc-im-mode nil)))
-(advice-add 'mozc-cursor-color-update
-            :around (lambda (orig-fun &rest args)
-                      (let ((mozc-mode mozc-im-mode))
-                        (apply orig-fun args))))
+  ;; mozc-cursor-color を利用するための対策
+  (defvar-local mozc-im-mode nil)
+  (add-hook 'mozc-im-activate-hook (lambda () (setq mozc-im-mode t)))
+  (add-hook 'mozc-im-deactivate-hook (lambda () (setq mozc-im-mode nil)))
+  (advice-add 'mozc-cursor-color-update
+              :around (lambda (orig-fun &rest args)
+                        (let ((mozc-mode mozc-im-mode))
+                          (apply orig-fun args))))
 
-;; isearch を利用する前後で IME の状態を維持するための対策
-(add-hook 'isearch-mode-hook (lambda () (setq im-state mozc-im-mode)))
-(add-hook 'isearch-mode-end-hook
-          (lambda ()
-            (unless (eq im-state mozc-im-mode)
-              (if im-state
-                  (activate-input-method default-input-method)
-                (deactivate-input-method)))))
+  ;; isearch を利用する前後で IME の状態を維持するための対策
+  (add-hook 'isearch-mode-hook (lambda () (setq im-state mozc-im-mode)))
+  (add-hook 'isearch-mode-end-hook
+            (lambda ()
+              (unless (eq im-state mozc-im-mode)
+                (if im-state
+                    (activate-input-method default-input-method)
+                  (deactivate-input-method)))))
 
-;; wdired 終了時に IME を OFF にする
-(advice-add 'wdired-finish-edit
-            :after (lambda (&rest args)
-                     (deactivate-input-method)))
-                     
-;; Windows の mozc では、セッション接続直後 directモード になるので
-;; hiraganaモード にする
-(advice-add 'mozc-session-execute-command
-            :after (lambda (&rest args)
-                     (when (eq (nth 0 args) 'CreateSession)
-                       ;; (mozc-session-sendkey '(hiragana)))))
-                       (mozc-session-sendkey '(Hankaku/Zenkaku)))))
+  ;; wdired 終了時に IME を OFF にする
+  (advice-add 'wdired-finish-edit
+              :after (lambda (&rest args)
+                       (deactivate-input-method)))
+
+  ;; Windows の mozc では、セッション接続直後 directモード になるので
+  ;; hiraganaモード にする
+  (advice-add 'mozc-session-execute-command
+              :after (lambda (&rest args)
+                       (when (eq (nth 0 args) 'CreateSession)
+                         ;; (mozc-session-sendkey '(hiragana)))))
+                         (mozc-session-sendkey '(Hankaku/Zenkaku)))))
+)
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
@@ -229,6 +253,10 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
+
+(setq site-custom-file (expand-file-name "site-custom.el" user-emacs-directory))
+(when (file-exists-p site-custom-file)
+  (load site-custom-file))
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
