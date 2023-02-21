@@ -62,6 +62,12 @@
 ; "yes or no"を"y or n"にする
 (fset 'yes-or-no-p 'y-or-n-p)
 
+; for macOS
+(when run-darwin
+  (setq mac-option-modifier 'meta)      ; option => meta(command)
+  (setq mac-command-modifier 'super)    ; command => option
+  )
+
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ mozc                                                          ;;;
