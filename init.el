@@ -70,6 +70,30 @@
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
+;;; @ window system configuration                                   ;;;
+;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
+
+(when window-system
+  ; macOS (MacBook Air 2013 Mid)
+  (when run-darwin
+    (setq default-frame-alist
+          (append '((width                . 86)
+                    (height               . 49)
+                    (top                  . 0)
+                    (left                 . 720)
+                    ) default-frame-alist))
+    (set-face-attribute 'default nil
+                        :family "UDEV Gothic 35"
+                        :foundry "nil"
+                        :slant 'normal
+                        :weight 'normal
+                        :height 140
+                        :width 'normal)
+    )
+  (setq initial-frame-alist default-frame-alist))
+
+
+;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ mozc                                                          ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
@@ -259,10 +283,6 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
-
-(setq site-custom-file (expand-file-name "site-custom.el" user-emacs-directory))
-(when (file-exists-p site-custom-file)
-  (load site-custom-file))
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;

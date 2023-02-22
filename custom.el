@@ -29,7 +29,6 @@
  '(global-flycheck-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(initial-frame-alist '((top . 31)))
  '(js2-strict-missing-semi-warning nil)
  '(make-backup-files t)
  '(markdown-asymmetric-header t)
@@ -58,10 +57,3 @@
  '(yas-global-mode t)
  '(yas-snippet-dirs
    '("~/.emacs.d/etc/snippets" "~/.emacs.d/site-etc/yasnippet/snippets")))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "UDEV Gothic 35" :foundry "twr " :slant normal :weight normal :height 104 :width normal))))
- '(markdown-code-face ((t (:inherit nil)))))
