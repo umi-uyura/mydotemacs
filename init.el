@@ -10,6 +10,10 @@
                           (equal system-type 'ms-dos)
                           (equal system-type 'cygwin)))
 
+;; WSL
+(defconst run-wsl (and (eq system-type 'gnu/linux)
+                       (/= (length (getenv "WSL_DISTRO_NAME")) 0)))
+
 ;; Mac OS X/GNU-Darwin
 (defconst run-darwin (equal system-type 'darwin))
 
@@ -74,6 +78,19 @@
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
 (when window-system
+  ; Windows (WSL)
+  (when run-wsl
+    (setq default-frame-alist
+          (append '((top                  . 31)
+                    ) default-frame-alist))
+    (set-face-attribute 'default nil
+                        :family "UDEV Gothic 35"
+                        :foundry "twr "
+                        :slant 'normal
+                        :weight 'normal
+                        :height 104
+                        :width 'normal)
+    )
   ; macOS (MacBook Air 2013 Mid)
   (when run-darwin
     (setq default-frame-alist
