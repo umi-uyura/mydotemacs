@@ -1,21 +1,30 @@
 My dotemacs
 ===========
 
-Setup routine
--------------
+Preparation
+-----------
 
 ### Windows & WSL
-
-#### Require
 
 * VcXsrv
 * Google Japanese Input
 * [mozc_emacs_helper for Windows](https://github.com/smzht/mozc_emacs_helper) - mozc_emacs_helper.exe
 * [iRi-E/mozc-el-extensions](https://github.com/iRi-E/mozc-el-extensions/) - mozc-cursor-color.el
 
-#### Setup
+
+Setup routine
+-------------
 
 * Clone this repository to `$HOME/.emacs.d`
+* Start emacs
+* `M-x load-file ~/.emacs.d/custom.el`
+* `package-install-selected-packages`
+
+
+### Windows & WSL
+
+Setup mozc
+
 * Download `mozc_emacs_helper.exe` and place it in `site-bin`.
   * Create `site-bin/mozc_emacs_helper.sh`
     ```
@@ -26,6 +35,18 @@ Setup routine
     ```
   * Add execute permission `site-bin/mozc_emacs_helper.exe` and `site-bin/mozc_emacs_helper.sh`
 * Download `mozc-cursor-color.el` and place it in `site-lisp`.
-* Start emacs
-* `M-x load-file ~/.emacs.d/custom.el`
-* `package-install-selected-packages`
+
+Create symlink for open-junk-mode
+
+```
+$ ln -s <path/to/junk> ~/.emacs.d/var/junk
+```
+
+
+### macOS
+
+Create symlink for open-junk-mode
+
+```
+$ ln -s <path/to/junk> ~/.emacs.d/var/junk
+```
