@@ -24,6 +24,7 @@
  '(delete-selection-mode t)
  '(dired-dwim-target 'dired-dwim-target-next)
  '(emojify-emojis-dir "~/.emacs.d/site-etc/emojis")
+ '(gc-cons-threshold 100000000)
  '(global-auto-revert-mode t)
  '(global-emojify-mode t)
  '(global-flycheck-mode t)
@@ -41,7 +42,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("melpa-stable" . "https://melpa.org/packages/")))
  '(package-selected-packages
-   '(go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
+   '(lsp-mode go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(recentf-save-file "~/.emacs.d/var/recentf")
