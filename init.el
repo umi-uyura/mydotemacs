@@ -68,8 +68,9 @@
 
 ; for macOS
 (when run-darwin
-  (setq mac-option-modifier 'meta)      ; option => meta(command)
-  (setq mac-command-modifier 'super)    ; command => option
+  (setq mac-option-modifier 'meta)              ; option => meta(command)
+  (setq mac-command-modifier 'super)            ; command => option
+  (define-key global-map (kbd "M-¥") [?\\])     ; backslash
   )
 
 
