@@ -31,6 +31,8 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(js2-strict-missing-semi-warning nil)
+ '(magit-status-headers-hook
+   '(magit-insert-error-header magit-insert-diff-filter-header magit-insert-head-branch-header magit-insert-upstream-branch-header magit-insert-push-branch-header magit-insert-tags-header magit-insert-user-header))
  '(make-backup-files t)
  '(markdown-asymmetric-header t)
  '(markdown-fontify-code-blocks-natively t)
