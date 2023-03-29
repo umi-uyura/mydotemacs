@@ -53,6 +53,7 @@
  '(select-active-regions nil)
  '(standard-indent 2)
  '(tool-bar-mode nil)
+ '(tramp-persistency-file-name "~/.emacs.d/var/tramp")
  '(transient-history-file "~/.emacs.d/var/transient/history.el")
  '(transient-levels-file "~/.emacs.d/var/transient/levels.el")
  '(transient-values-file "~/.emacs.d/var/transient/values.el")
