@@ -11,7 +11,7 @@ Keybinding cheatsheet
 | 概要 | 関数名 | キーバインド |
 |------|--------|--------------|
 | バッファを読み込み直す | revert-buffer | - |
-
+| ファイルをroot権限で開く | `/sudo://<path>` | - |
 
 ### Rectangles（矩形領域）
 
