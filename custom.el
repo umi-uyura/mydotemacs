@@ -31,6 +31,7 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(js2-strict-missing-semi-warning nil)
+ '(lsp-session-file "~/.emacs.d/var/.lsp-session-v1")
  '(magit-status-headers-hook
    '(magit-insert-error-header magit-insert-diff-filter-header magit-insert-head-branch-header magit-insert-upstream-branch-header magit-insert-push-branch-header magit-insert-tags-header magit-insert-user-header))
  '(make-backup-files t)
@@ -44,7 +45,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("melpa-stable" . "https://melpa.org/packages/")))
  '(package-selected-packages
-   '(visual-regexp visual-regexp-steroids lsp-mode go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
+   '(visual-regexp visual-regexp-steroids direnv company lsp-ui lsp-mode go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(recentf-save-file "~/.emacs.d/var/recentf")
