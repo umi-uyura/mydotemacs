@@ -42,8 +42,7 @@
  '(package-archives
    '(("gnu" . "https://elpa.gnu.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")
-     ("melpa" . "https://melpa.org/packages/")
-     ("melpa-stable" . "https://melpa.org/packages/")))
+     ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
    '(visual-regexp visual-regexp-steroids direnv company lsp-ui lsp-mode go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
  '(recentf-max-saved-items 100)
