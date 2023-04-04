@@ -38,7 +38,7 @@
  '(markdown-asymmetric-header t)
  '(markdown-fontify-code-blocks-natively t)
  '(mozc-leim-title "あ")
- '(open-junk-file-format "~/.emacs.d/var/junk/%Y-%m-%d-%H%M%S." t)
+ '(open-junk-file-format "~/.emacs.d/var/junk/%Y%m%d-%H%M%S." t)
  '(package-archives
    '(("gnu" . "https://elpa.gnu.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")
