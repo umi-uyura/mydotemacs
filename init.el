@@ -41,6 +41,11 @@
 ;;; @ global settings                                               ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
+;; Increase the amount of data which Emacs reads from the process
+;; - for lsp-mode
+;;   https://emacs-lsp.github.io/lsp-mode/page/performance/#increase-the-amount-of-data-which-emacs-reads-from-the-process
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
+
 ;; Enable find file at point
 (ffap-bindings)
 
