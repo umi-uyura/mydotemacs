@@ -1,0 +1,11 @@
+# -*- mode: snippet; coding: utf-8 -*-
+#name : (previous year-month)
+# --
+`(let ((system-time-locale "ja_JP.UTF-8"))
+  (let* ((now (decode-time))
+         (year (nth 5 now))
+         (month (nth 4 now))
+         (last-month (if (= month 1) 12 (- month 1)))
+         (last-month-year (if (= month 1) (- year 1) year))
+         (time (apply #'encode-time (list 0 0 0 1 last-month last-month-year))))
+    (format-time-string "%Y年%m月" time)))`
