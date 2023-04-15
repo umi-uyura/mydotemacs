@@ -59,6 +59,7 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)       ; ibuffer
 (global-set-key (kbd "C-x B") 'list-buffers)
 (global-set-key (kbd "C-c t") 'toggle-truncate-lines)        ; 行折り返しのON/OFF
+(global-set-key (kbd "C-x i") 'company-complete)             ; 補完呼び出し (company-mode)
 (global-set-key (kbd "C-x F") 'recentf-open-files)           ; 最近使用したファイルから開く (recentf-mode)
 (global-set-key (kbd "C-c J") 'open-junk-file)               ; メモファイル作成 (open-junk-file)
 (global-set-key (kbd "<henkan>") 'toggle-input-method)       ; 変換キー
