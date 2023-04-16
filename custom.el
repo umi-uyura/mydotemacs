@@ -63,7 +63,7 @@
  '(visible-bell t)
  '(yas-global-mode t)
  '(yas-snippet-dirs
-   '("~/.emacs.d/etc/snippets" "~/.emacs.d/site-etc/yasnippet/snippets")))
+   '(yasnippet-snippets-dir "~/.emacs.d/etc/snippets" "~/.emacs.d/site-etc/yasnippet/snippets")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
