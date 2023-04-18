@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: looping argments
+# key: args-loop
+# --
+for arg in "$@"; do
+  echo "$arg"$0
+done

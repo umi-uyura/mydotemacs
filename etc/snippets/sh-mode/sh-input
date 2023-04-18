@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: receive stdin and pipe
+# key: sh-input
+# --
+if [ -p /dev/stdin ]; then
+  # stdin (pipe)
+  data=$(cat -)
+elif [ -n "\$1" ] && [ -f "\$1" ]; then
+  # file input
+  data=$(cat "\$1")
+elif [ -n "\$1" ]; then
+  # argument
+  data="\$1"
+else
+  # standard input
+  data=$(cat \$1)
+fi

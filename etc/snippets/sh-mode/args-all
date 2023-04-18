@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: args all
+# key: args-all
+#
+# If enclosed in double quotes, it is treated as an array
+# "$@": `./sample.sh "a b" "c"` -> "a b" "c"
+# "$*": `./sample.sh "a b" "c"` -> "a b c"
+# --
+$@
