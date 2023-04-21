@@ -33,6 +33,7 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(js2-strict-missing-semi-warning nil)
+ '(lsp-keymap-prefix "C-c C-l")
  '(lsp-session-file "~/.emacs.d/var/.lsp-session-v1")
  '(magit-status-headers-hook
    '(magit-insert-error-header magit-insert-diff-filter-header magit-insert-head-branch-header magit-insert-upstream-branch-header magit-insert-push-branch-header magit-insert-tags-header magit-insert-user-header))
