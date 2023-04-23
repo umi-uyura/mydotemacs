@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: Check for command availability
+# key: where
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# --
+WHERE ${1:command} >nul 2>nul
+IF %ERRORLEVEL% EQU 0 (
+    ${2:run command}
+) ELSE (
+    ${3:command not found}
+)
