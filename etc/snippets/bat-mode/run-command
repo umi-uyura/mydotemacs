@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Get result of command execution
+# key: run-command
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# --
+FOR /f "usebackq delims=" %%A IN (\`${1:command}\`) DO (
+    ECHO %%A$0
+)
