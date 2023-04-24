@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Infinite loop with count
+# key: inloopc
+# --
+for i := 0;; i++ {
+    $0
+}

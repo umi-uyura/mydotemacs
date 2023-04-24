@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Infinite loop
+# key: inloop
+# --
+for {
+    $0
+}

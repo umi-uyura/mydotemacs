@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Ascii to integer
+# key: atoi
+# --
+strconv.Atoi("${1:number}")

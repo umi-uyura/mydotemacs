@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Get standard input
+# key: stdin
+# --
+scanner := bufio.NewScanner(os.Stdin)
+scanner.Scan()
+if err := scanner.Err(); err != nil {
+	fmt.Printf("Scanner error: %q\n", err)
+}
+text := scanner.Text()
