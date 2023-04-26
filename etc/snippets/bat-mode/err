@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Error handling
+# key: err
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))
+# --
+IF %ERRORLEVEL% EQU 0 (
+  ${1:normal operation}
+) ELSE (
+  ${2:error handling}
+)

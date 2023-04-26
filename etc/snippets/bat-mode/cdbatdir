@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Temporary move to directory where batch file is located
+# key: cdbatdir
+# --
+PUSHD "%~dp0"
+
+$0
+
+POPD
