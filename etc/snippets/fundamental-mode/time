@@ -1,4 +1,4 @@
-#name : (current time)
+#name : Current time
 # --
 `(let ((system-time-locale "ja_JP.UTF-8"))
   (format-time-string "%H:%M:%S"))`

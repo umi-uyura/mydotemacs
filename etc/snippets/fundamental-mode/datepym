@@ -1,5 +1,5 @@
 # -*- mode: snippet; coding: utf-8 -*-
-#name : (previous year-month)
+#name : Current previous year-month (JP)
 # --
 `(let ((system-time-locale "ja_JP.UTF-8"))
   (let* ((now (decode-time))
