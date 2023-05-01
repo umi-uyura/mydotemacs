@@ -1,0 +1,3 @@
+#name : Current UNIX epoch time
+# --
+`(floor (time-to-seconds (current-time)))`
