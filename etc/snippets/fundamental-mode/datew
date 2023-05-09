@@ -1,5 +1,5 @@
 # -*- mode: snippet; coding: utf-8 -*-
-#name : Current date
+#name : Current date with weekday (JP)
 # --
 `(let ((system-time-locale "ja_JP.UTF-8"))
-  (format-time-string "%m/%d"))`
+  (format-time-string "%Y/%m/%d (%a)"))`
