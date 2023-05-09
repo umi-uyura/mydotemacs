@@ -40,6 +40,7 @@
  '(make-backup-files t)
  '(markdown-asymmetric-header t)
  '(markdown-fontify-code-blocks-natively t)
+ '(mc/list-file "~/.emacs.d/var/.mc-lists.el")
  '(mozc-leim-title "あ")
  '(open-junk-file-format "~/.emacs.d/var/junk/%Y%m%d-%H%M%S." t)
  '(package-archives
