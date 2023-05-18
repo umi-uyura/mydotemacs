@@ -2,4 +2,4 @@
 #name : Current date
 # --
 `(let ((system-time-locale "ja_JP.UTF-8"))
-  (format-time-string "%m/%d"))`
+  (format-time-string "%1m/%1d"))`
