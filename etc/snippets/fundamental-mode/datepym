@@ -8,4 +8,4 @@
          (last-month (if (= month 1) 12 (- month 1)))
          (last-month-year (if (= month 1) (- year 1) year))
          (time (apply #'encode-time (list 0 0 0 1 last-month last-month-year))))
-    (format-time-string "%Y年%m月" time)))`
+    (format-time-string "%Y年%1m月" time)))`
