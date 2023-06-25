@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Check existence of command
+# key: chk-cmd
+# --
+if hash $1 2> /dev/null; then
+   $0
+fi
