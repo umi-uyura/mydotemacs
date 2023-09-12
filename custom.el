@@ -20,7 +20,7 @@
  '(current-language-environment "Japanese")
  '(custom-enabled-themes '(ample-zen))
  '(custom-safe-themes
-   '("c7eb06356fd16a1f552cfc40d900fe7326ae17ae7578f0ef5ba1edd4fdd09e58" default))
+   '("ace9f12e0c00f983068910d9025eefeb5ea7a711e774ee8bb2af5f7376018ad2" "c7eb06356fd16a1f552cfc40d900fe7326ae17ae7578f0ef5ba1edd4fdd09e58" default))
  '(default-input-method "japanese-mozc-im")
  '(delete-selection-mode t)
  '(dired-dwim-target 'dired-dwim-target-next)
