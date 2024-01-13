@@ -30,6 +30,9 @@
  '(global-company-mode t)
  '(global-emojify-mode t)
  '(global-flycheck-mode t)
+ '(gts-buffer-window-config
+   '((display-buffer-reuse-window display-buffer-in-side-window)
+     (side . bottom)))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(js2-strict-missing-semi-warning nil)
@@ -48,7 +51,7 @@
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")
      ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
-   '(wgrep projectile web-mode web-beautify apache-mode nginx-mode typescript-mode vue-mode yaml-mode dockerfile-mode php-mode migemo visual-regexp visual-regexp-steroids direnv company lsp-ui lsp-mode go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
+   '(go-translate wgrep projectile web-mode web-beautify apache-mode nginx-mode typescript-mode vue-mode yaml-mode dockerfile-mode php-mode migemo visual-regexp visual-regexp-steroids direnv company lsp-ui lsp-mode go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
  '(projectile-known-projects-file "~/.emacs.d/var/projectile-bookmarks.eld")
  '(python-indent-offset 2)
  '(recentf-max-saved-items 100)

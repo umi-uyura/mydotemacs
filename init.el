@@ -316,6 +316,25 @@
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
+;;; @ go-translate                                                  ;;;
+;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
+
+(require 'go-translate)
+
+(setq gts-translate-list '(("en" "ja") ("ja" "en")))
+
+(setq gts-default-translator
+      (gts-translator
+       :picker (gts-prompt-picker)
+       :engines (list
+                 (gts-deepl-engine :auth-key (getenv "DEEPL_AUTH_KEY") :pro nil)
+                 (gts-google-engine)
+                 (gts-bing-engine))
+       :render (gts-buffer-render)))
+
+(global-set-key (kbd "C-c T") 'gts-do-translate)
+
+;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ web-mode                                                      ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
