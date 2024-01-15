@@ -24,6 +24,7 @@
  '(default-input-method "japanese-mozc-im")
  '(delete-selection-mode t)
  '(dired-dwim-target 'dired-dwim-target-next)
+ '(dired-listing-switches "-alh")
  '(emojify-emojis-dir "~/.emacs.d/site-etc/emojis")
  '(gc-cons-threshold 100000000)
  '(global-auto-revert-mode t)
