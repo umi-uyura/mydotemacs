@@ -1,0 +1,5 @@
+# -*- mode: snippet; -*-
+# name: update with condition
+# key: update
+# --
+UPDATE ${table} SET ${column1} = ${value1}, ${column2} = ${value2} WHERE ${condition};$0

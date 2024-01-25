@@ -1,0 +1,5 @@
+# -*- mode: snippet; -*-
+# name: update all record
+# key: updall
+# --
+UPDATE ${table} SET ${key} = ${value};$0
