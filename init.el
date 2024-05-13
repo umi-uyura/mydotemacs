@@ -338,18 +338,18 @@
 
 (require 'go-translate)
 
-(setq gts-translate-list '(("en" "ja") ("ja" "en")))
+(setq gt-langs '("en" "ja"))
 
-(setq gts-default-translator
-      (gts-translator
-       :picker (gts-prompt-picker)
+(setq gt-default-translator
+      (gt-translator
+       :taker   (gt-taker :text 'buffer :pick 'paragraph)  ; config the Taker
        :engines (list
-                 (gts-deepl-engine :auth-key (getenv "DEEPL_AUTH_KEY") :pro nil)
-                 (gts-google-engine)
-                 (gts-bing-engine))
-       :render (gts-buffer-render)))
+                 (gt-deepl-engine :key (getenv "DEEPL_AUTH_KEY") :pro nil)
+                 (gt-google-engine)
+                 (gt-bing-engine))
+       :render (gt-buffer-render)))
 
-(global-set-key (kbd "C-c T") 'gts-do-translate)
+(global-set-key (kbd "C-c T") 'gt-do-translate)
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
