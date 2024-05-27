@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: Ask for YES/NO
+# key: ask-for-yes-no
+# --
+echo -n "Do you want to run it? [y/N]: "
+read -r ANS
+
+case $ANS in
+  [Yy]* )
+    echo "Yes"
+    ;;
+  * )
+    echo "No"
+    ;;
+esac
