@@ -55,7 +55,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("jcs-elpa" . "https://jcs-emacs.github.io/jcs-elpa/packages/")))
  '(package-selected-packages
-   '(find-file-in-project gptel powershell go-translate wgrep projectile web-mode web-beautify apache-mode nginx-mode typescript-mode vue-mode yaml-mode dockerfile-mode php-mode migemo visual-regexp visual-regexp-steroids direnv company lsp-ui lsp-mode go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
+   '(dotenv-mode find-file-in-project gptel powershell go-translate wgrep projectile web-mode web-beautify apache-mode nginx-mode typescript-mode vue-mode yaml-mode dockerfile-mode php-mode migemo visual-regexp visual-regexp-steroids direnv company lsp-ui lsp-mode go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
  '(projectile-known-projects-file "~/.emacs.d/var/projectile-bookmarks.eld")
  '(python-indent-offset 2)
  '(recentf-max-saved-items 100)
