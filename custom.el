@@ -35,6 +35,9 @@
  '(grep-command "rg -nH --no-heading --sort=path --color=always -e ")
  '(grep-find-command
    '("rg -nH --no-heading --color=always --sort=path -e '' \"$(pwd)\"" . 52))
+ '(gt-buffer-render-window-config
+   '((display-buffer-reuse-window display-buffer-in-direction)
+     (direction . below)))
  '(gts-buffer-window-config
    '((display-buffer-reuse-window display-buffer-in-side-window)
      (side . bottom)))
