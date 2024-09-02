@@ -32,6 +32,9 @@
  '(global-company-mode t)
  '(global-emojify-mode t)
  '(global-flycheck-mode t)
+ '(grep-command "rg -nH --no-heading --sort=path --color=always -e ")
+ '(grep-find-command
+   '("rg -nH --no-heading --color=always --sort=path -e '' \"$(pwd)\"" . 52))
  '(gts-buffer-window-config
    '((display-buffer-reuse-window display-buffer-in-side-window)
      (side . bottom)))
