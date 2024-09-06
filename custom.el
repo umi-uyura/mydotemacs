@@ -32,9 +32,9 @@
  '(global-company-mode t)
  '(global-emojify-mode t)
  '(global-flycheck-mode t)
- '(grep-command "rg -nH --no-heading --sort=path --color=always -e ")
+ '(grep-command "rg -niH --no-heading --sort=path --color=always -e ")
  '(grep-find-command
-   '("rg -nH --no-heading --color=always --sort=path -e '' \"$(pwd)\"" . 52))
+   '("rg -niH --no-heading --color=always --sort=path -e '' \"$(pwd)\"" . 52))
  '(gt-buffer-render-window-config
    '((display-buffer-reuse-window display-buffer-in-direction)
      (direction . below)))
