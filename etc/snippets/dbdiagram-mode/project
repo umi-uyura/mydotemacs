@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Project definition
+# --
+Project "${1:project name}" {
+  database_type: ${2:$$(yas-choose-value
+  "'PostgreSQL'"
+  "'MySQL'"
+  "'MSSql'"
+  "'Oracle'"
+  )}
+  Note: '$3'
+}

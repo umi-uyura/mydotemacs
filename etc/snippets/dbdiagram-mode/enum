@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Enum definition
+# --
+Enum "${1:enum name}" {
+  ${3:value name} [note: '$4']
+  $0
+
+  Note: '$2'
+}

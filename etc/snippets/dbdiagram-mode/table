@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Table definition
+# --
+Table "${1:table name}" {
+  ${3:column name} ${4:column type} [$5, note: '$6']
+  $0
+
+  Note: '$2'
+}
