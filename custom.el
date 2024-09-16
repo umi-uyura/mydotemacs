@@ -21,7 +21,6 @@
  '(custom-enabled-themes '(ample-zen))
  '(custom-safe-themes
    '("ace9f12e0c00f983068910d9025eefeb5ea7a711e774ee8bb2af5f7376018ad2" "c7eb06356fd16a1f552cfc40d900fe7326ae17ae7578f0ef5ba1edd4fdd09e58" default))
- '(default-input-method "japanese-mozc-im")
  '(delete-selection-mode t)
  '(dired-dwim-target 'dired-dwim-target-next)
  '(dired-listing-switches "-alh")
@@ -61,7 +60,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("jcs-elpa" . "https://jcs-emacs.github.io/jcs-elpa/packages/")))
  '(package-selected-packages
-   '(dotenv-mode find-file-in-project gptel powershell go-translate wgrep projectile web-mode web-beautify apache-mode nginx-mode typescript-mode vue-mode yaml-mode dockerfile-mode php-mode migemo visual-regexp visual-regexp-steroids direnv company lsp-ui lsp-mode go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets mozc mozc-im mozc-popup ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
+   '(dotenv-mode find-file-in-project gptel powershell go-translate wgrep projectile web-mode web-beautify apache-mode nginx-mode typescript-mode vue-mode yaml-mode dockerfile-mode php-mode migemo visual-regexp visual-regexp-steroids direnv company lsp-ui lsp-mode go-mode js2-mode ahk-mode csv-mode auto-package-update multiple-cursors japanese-holidays rainbow-mode rainbow-delimiters emojify restclient yasnippet-snippets ample-zen-theme textile-mode flycheck magit open-junk-file yasnippet markdown-mode))
  '(projectile-known-projects-file "~/.emacs.d/var/projectile-bookmarks.eld")
  '(python-indent-offset 2)
  '(recentf-max-saved-items 100)
