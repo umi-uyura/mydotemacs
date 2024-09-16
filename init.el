@@ -112,7 +112,7 @@
                         :foundry "twr "
                         :slant 'normal
                         :weight 'normal
-                        :height 104
+                        :height 140
                         :width 'normal)
     )
   ; macOS (MacBook Air 2013 Mid)
