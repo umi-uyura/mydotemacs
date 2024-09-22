@@ -241,9 +241,9 @@
 ;;; @ quail                                                         ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
-(require 'quail)
-(defvar quail-japanese-use-double-n t)   ; If non-nill, use type "nn" to insert ん
-(define-key quail-conversion-keymap "\C-h" 'quail-conversion-backward-delete-char)
+;; (require 'quail)
+;; (defvar quail-japanese-use-double-n t)   ; If non-nill, use type "nn" to insert ん
+;; (define-key quail-conversion-keymap "\C-h" 'quail-conversion-backward-delete-char)
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
