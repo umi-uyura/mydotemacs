@@ -79,9 +79,6 @@
 (global-set-key (kbd "C-x F") 'recentf-open-files)           ; 最近使用したファイルから開く (recentf-mode)
 (global-set-key (kbd "C-x f") 'find-file-in-project)         ; 現在のプロジェクト内から開く (find-file-in-project)
 (global-set-key (kbd "C-c J") 'open-junk-file)               ; メモファイル作成 (open-junk-file)
-(global-set-key (kbd "<henkan>") 'toggle-input-method)       ; 変換キー
-(global-set-key (kbd "<muhenkan>") 'toggle-input-method)     ; 無変換キー
-;; (global-set-key (kbd "<zenkaku-hankaku>") 'toggle-input-method) ; 半角/全角キー
 (global-set-key (kbd "C-;") #'(lambda() (interactive) (text-scale-increase 1)))
 (global-set-key (kbd "C--") #'(lambda() (interactive) (text-scale-decrease 1)))
 (global-set-key (kbd "M-0") #'(lambda() (interactive) (text-scale-set 0)))
