@@ -33,7 +33,7 @@
  '(global-flycheck-mode t)
  '(grep-command "rg -niH --no-heading --sort=path --color=always -e ")
  '(grep-find-command
-   '("rg -niH --no-heading --color=always --sort=path -e '' \"$(pwd)\"" . 52))
+   '("rg -niH --no-heading --color=always --sort=path -e '' \"$(pwd)\"" . 53))
  '(gt-buffer-render-window-config
    '((display-buffer-reuse-window display-buffer-in-direction)
      (direction . below)))
