@@ -32,6 +32,10 @@
  '(global-company-mode t)
  '(global-emojify-mode t)
  '(global-flycheck-mode t)
+ '(gptel-prompt-prefix-alist
+   '((markdown-mode . "## ")
+     (org-mode . "*** ")
+     (text-mode . "## ")))
  '(grep-command "rg -niH --no-heading --sort=path --color=always -e ")
  '(grep-find-command
    '("rg -niH --no-heading --color=always --sort=path -e '' \"$(pwd)\"" . 53))
