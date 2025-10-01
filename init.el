@@ -431,6 +431,11 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
+;; /site-lisp/site-custom.el
+(defvar site-custom-file (expand-file-name "site-custom.el" site-lisp-path))
+(when (file-exists-p site-custom-file)
+  (load site-custom-file))
+
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ auto-package-update                                           ;;;
