@@ -342,25 +342,6 @@
 
 
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-;;; @ go-translate                                                  ;;;
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
-
-(require 'go-translate)
-
-(setq gt-langs '(en ja))
-(setq my-gt-engines
-      (list (gt-deepl-engine :key (getenv "DEEPL_AUTH_KEY") :pro nil)
-            (gt-google-engine)
-            (gt-bing-engine)
-            (gt-chatgpt-engine)))
-(setq gt-default-translator
-      (gt-translator :engines my-gt-engines
-                     :render (gt-buffer-render)))
-
-(global-set-key (kbd "C-c T") 'gt-do-translate)
-
-
-;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 ;;; @ gptel                                                         ;;;
 ;;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;;
 
